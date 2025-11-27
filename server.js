@@ -12,7 +12,7 @@ const customerRoutes = require("./routes/customer");
 const orderRoutes = require("./routes/order");
 const dashboardRoutes = require("./routes/dashboard");
 const fileRoutes = require("./routes/file");
-const dbRoutes = require("./routes/db");
+
 // const userRoutes = require("./routes/user");
 
 const app = express();
@@ -29,7 +29,7 @@ app.use("/api/products", productRoutes);
 app.use("/api/customers", customerRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/dashboard", dashboardRoutes);
-app.use("/api/db", dbRoutes);
+
 
 sequelize.sync({ alter: true }).then(() => {
   app.listen(process.env.PORT || 5000, () =>
