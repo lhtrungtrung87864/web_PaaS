@@ -1,0 +1,10 @@
+# Node.js
+node_modules/
+.env
+
+# VSCode settings
+.vscode/settings.json
+
+# Build / cache
+.next/
+dist/
