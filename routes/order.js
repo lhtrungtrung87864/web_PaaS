@@ -17,7 +17,7 @@
 
 const express = require("express");
 const { authenticate } = require("../middlewares/authMiddleware");
-const { createOrder, getOrders, getOrder } = require("../controllers/orderController");
+const { createOrder, getOrders, getOrder, updateOrder, deleteOrder } = require("../controllers/orderController");
 
 const router = express.Router();
 
@@ -30,4 +30,11 @@ router.get("/", authenticate, getOrders);
 // Xem chi tiết 1 order
 router.get("/:id", authenticate, getOrder);
 
+// Cập nhật order
+router.put("/:id", authenticate, updateOrder);
+
+// Xóa order
+router.delete("/:id", authenticate, deleteOrder);
+
 module.exports = router;
+
