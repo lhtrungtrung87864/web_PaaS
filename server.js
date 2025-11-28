@@ -6,12 +6,12 @@ const sequelize = require("./config/db");
 
 // Routes
 
-const authRoutes = require("./routes/auth");
-const productRoutes = require("./routes/product");
-const customerRoutes = require("./routes/customer");
-const orderRoutes = require("./routes/order");
-const dashboardRoutes = require("./routes/dashboard");
-const fileRoutes = require("./routes/file");
+const authRoutes = require("./api/auth");
+const productRoutes = require("./api/product");
+const customerRoutes = require("./api/customer");
+const orderRoutes = require("./api/order");
+const dashboardRoutes = require("./api/dashboard");
+const fileRoutes = require("./api/file");
 
 // const userRoutes = require("./routes/user");
 
